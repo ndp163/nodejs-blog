@@ -4,13 +4,17 @@ const morgan = require("morgan");
 const PORT = 3000;
 const app = express();
 
+app.set("view engine", "pug");
+app.set("views", __dirname + "/resources/");
+
 app.use(morgan("combined"));
+app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
-    res.send("Page INDEX");
+    res.render("index");
 });
-app.get("/trang-chu", (req, res) => {
-    res.send("Page trang chu");
+app.get("/news", (req, res) => {
+    res.render("news");
 });
 
 app.listen(PORT, () => {
