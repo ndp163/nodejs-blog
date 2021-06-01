@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div(class="container")
+        form(action="/news", method="GET") 
+            div(class="form-group")
+                label(for="search-input")= "Từ khóa"
+                input(id="search-input", class="form-control", name="q", placeholder="Nhập từ khóa...")
+            
+            div(class="form-group")
+                label(for="gender-input")= "Từ khóa"
+                select(id="gender-input", class="form-control", name="gender")
+                    option(value="")= "-- Chọn giới tính --" 
+                    option(value="male")= "Nam" 
+                    option(value="female")= "Nữ" 
+            
+            button(class="btn btn-primary", type="submit")= "Tìm kiếm"
