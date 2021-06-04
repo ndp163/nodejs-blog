@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+    div(class="mt-4")
+        div(class="row")
+            each course in courses
+                div(class="col-sm-6 col-lg-4 mt-2")
+                    div(class="card card-course-item")
+                        img(class="card-img-top", src="https://via.placeholder.com/1000")
+                        div(class="card-body")
+                            h5(class="card-title")= course.name
+                            p(class="card-text")= course.content 
+                            a(href="/courses/"+course.slug, class="btn btn-primary")= "Chi tiết khóa học"
+                            a(href="/courses/"+course._id+"/edit", class="btn btn-primary")= "Sửa khóa học"
+                            button(class="btn btn-primary mt-2 btn-delete-course", data-id=course._id)= "Xóa khóa học"
+
+        form(name="delete-course-form", method="POST")
+
+append footer
+    script(src="js/edit.js")

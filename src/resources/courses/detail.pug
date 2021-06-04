@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+    div(class="row mt-4")
+        div(class="col-lg-3")
+            button= "Học ngay"
+        div(class="col-lg-9")
+            h2= course.name 
+            iframe(width="560", height="315", src="https://www.youtube.com/embed/" + course.videoId, title="YouTube video player", frameborder="0", allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+            p= course.content

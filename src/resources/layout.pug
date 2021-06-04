@@ -11,16 +11,17 @@ html(lang="en")
         header
             nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
                 .container-fluid
-                    a.navbar-brand(href='#') Navbar
+                    a.navbar-brand(href='/') Blog
                     button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
                         span.navbar-toggler-icon
                     #navbarSupportedContent.collapse.navbar-collapse
                         ul.navbar-nav.me-auto.mb-2.mb-lg-0
                             li.nav-item
-                                a.nav-link.active(aria-current='page' href='#') Home
+                                a.nav-link.active(aria-current='page' href='/courses') Course
                             li.nav-item
-                                a.nav-link(href='#') Link
-        block content
-        footer 
-            h1= 'FOOTER'
-        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js", integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4", crossorigin="anonymous")
+                                a.nav-link.active(aria-current='page' href='/courses/create') Thêm khóa học
+        div(class="container")
+            block content
+        block footer
+            script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js", integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4", crossorigin="anonymous")
+            script(src="https://code.jquery.com/jquery-3.6.0.min.js", integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=", crossorigin="anonymous")

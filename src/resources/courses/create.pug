@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    form(method="POST")
+        div(class="mb-3")
+            label(for="name", class="form-label") Name
+            input(type="text", class="form-control", id="name", name="name")
+        div(class="mb-3")
+            label(for="content", class="form-label") Content
+            input(type="text", class="form-control", id="content", name="content")
+        div(class="mb-3")
+            label(for="videoId", class="form-label") Video-Id
+            input(type="text", class="form-control", id="videoId", name="videoId")
+        
+        button(type="submit", class="btn btn-primary") Submit
